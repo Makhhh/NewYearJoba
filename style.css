@@ -1,0 +1,419 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    line-height: 1.5;
+    height: 300vh;
+
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #8A0303;
+    color: white;
+    position: relative;
+    border-bottom: 5px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid white;
+
+
+}
+
+
+
+
+.logo {
+    font-size: 36px;
+    font-weight: 600;
+    color: #ffffff; 
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    position: relative;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    color: #fff;
+    transform: scale(1.1); 
+}
+
+
+.logo::after {
+    content: '🎄'; 
+    font-size: 32px;
+    position: absolute;
+    top: 50%;
+    right: -40px;
+    transform: translateY(-50%);
+}
+
+nav {
+    display: flex;
+    position: absolute;
+    right: 500px;
+    gap: 30px; 
+}
+nav a {
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border: solid black 2px;
+    border-radius: 20px;
+}
+nav a:hover{
+    color: #0c0a0a;
+    background-color: white;
+    transform: scale(1.15);
+}
+.snow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    font-size: 24px;
+    color: white;
+    opacity: 0.9;
+    animation: snow 10s linear infinite;
+    pointer-events: none;
+}
+
+
+@keyframes snow {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+#countdown-timer {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5em;
+    margin: 20px 0;
+    background-color: #8A0303;
+    border-radius: 10px;
+    padding: 20px;
+    border: solid 3px white
+}
+.icons-countdown{
+    height: 60px;
+    border-radius: 100px;
+}
+
+#countdown-timer div {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: solid 2px black;
+    padding: 10px;
+    border-radius: 15px;
+}
+.NY {
+    color: white; 
+}
+
+.arrivals h2{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.arrivals p{
+    color: white;
+}
+.arrivals {
+    padding: 10px;
+}
+
+.buttons-arr{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.special-button{
+    font-family: 'Poppins', sans-serif;
+    background-color: #cd3625;
+    border-radius: 25px;
+    padding: 8px;
+    border-bottom :yellow 6px solid;
+    border-right: yellow 3px solid;
+    border-left: yellow 3px solid;
+
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    justify-content: center;
+    padding: 20px;
+
+}
+
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.card h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 18px;
+    color: #e74c3c;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.arrows{
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.cards-two {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background-color: 	#0000001A;
+    border-bottom: solid white 3px;
+    border-top: solid white 3px;
+}
+
+.card-two {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 220px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-two img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #ddd;
+}
+
+.card-two h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+}
+
+.card-two:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+.subscribe-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background: #111; 
+    border: 2px solid #333;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    gap: 30px;
+    margin: 20px;
+}
+
+.subscribe-content {
+    max-width: 50%;
+    text-align: left;
+}
+
+.subscribe-content img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.subscribe-content h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.subscribe-content div {
+    display: flex;
+    align-items: center;
+}
+
+.subscribe-content input {
+    padding: 12px 15px;
+    border: 2px solid #ffc107;
+    border-radius: 30px 0 0 30px;
+    outline: none;
+    width: 300px;
+    font-size: 1rem;
+    background: #222; 
+    color: #fff;
+}
+
+.subscribe-content input::placeholder {
+    color: #bbb;
+}
+
+.subscribe-content button {
+    padding: 12px 20px;
+    background: #ff3b3b;
+    border: none;
+    border-radius: 0 30px 30px 0;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.subscribe-content button:hover {
+    background: #e02727;
+}
+
+.christmas-offer {
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(to bottom, #ff5722, #ff0000);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+.christmas-offer h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.christmas-offer p {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.christmas-offer img {
+    width: 100px;
+    margin-top: 15px;
+}
+
+
+
+footer {
+    background: linear-gradient(to bottom, #333, #000); 
+    color: #fff;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    border-top: 4px solid #ffc107; 
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+footer h3 {
+    color: #ffc107;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ffc107; 
+    display: inline-block;
+}
+
+footer p, footer ul {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer ul li a {
+    color: #ffc107;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer ul li a:hover {
+    color: #fff;
+}
+
+.social-icons img {
+    width: 35px;
+    margin: 0 10px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.3);
+    opacity: 0.8;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 15px;
+    font-size: 0.85rem;
+    color: #bbb;
+    border-top: 1px solid #555;
+    margin-top: 20px;
+}
+
